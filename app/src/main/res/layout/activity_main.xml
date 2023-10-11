@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5f7d74"
+    tools:context="za.nmu.wrpv.MainActivity">
+
+    <com.otaliastudios.zoom.ZoomLayout
+
+        android:id="@+id/z_l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5f7d74"
+        app:alignment="center"
+        app:hasClickableChildren="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_btns"
+        app:layout_constraintTop_toBottomOf="@id/scores">
+
+        <LinearLayout
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </com.otaliastudios.zoom.ZoomLayout>
+
+    <LinearLayout
+        android:id="@+id/scores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+
+            android:id="@+id/player_1_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/score_background"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/name_1"
+                style="@style/score_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tony"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/score_1"
+                style="@style/score_style"
+                android:text="0"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/player_2_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/score_background"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/name_2"
+                style="@style/score_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Njabulo"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/score_2"
+                style="@style/score_style"
+                android:text="0"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/player_3_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/score_background"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/name_3"
+                style="@style/score_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Themba"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/score_3"
+                style="@style/score_style"
+                android:text="0"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/player_4_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/score_background"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/name_4"
+                style="@style/score_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Njabulo"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/score_4"
+                style="@style/score_style"
+                android:text="0"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bag"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/bag_svgrepo_com"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_btns"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/bag_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="96"
+        android:textAlignment="center"
+        android:textColor="@color/my_background_color"
+        android:textSize="20dp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/bag"
+        app:layout_constraintLeft_toLeftOf="@id/bag"
+        app:layout_constraintRight_toRightOf="@id/bag"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/info_btn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/info_button"
+
+        app:layout_constraintBottom_toTopOf="@+id/bottom_btns"
+        app:layout_constraintLeft_toRightOf="@id/bag" />
+
+
+    <LinearLayout
+        android:id="@+id/zoom_btns"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_btns"
+        app:layout_constraintRight_toRightOf="parent"
+
+        >
+
+        <ImageView
+
+            android:id="@+id/zoom_out"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/zoom_out_svgrepo_com" />
+
+        <ImageView
+            android:id="@+id/zoom_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/zoom_in_svgrepo_com" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btns"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@+id/hand">
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+
+            android:id="@+id/menu_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_button"
+            android:src="@drawable/my_sound" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/trade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_button"
+            android:src="@drawable/swap_2" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/place"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/app_button"
+            android:src="@drawable/pass_button" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/hand"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="5dp"
+        android:background="@color/my_background_color"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/hand_tile_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+            android:background="@color/dark_blue"
+
+            android:padding="5dp"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/hand_tile_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+
+            android:background="@color/dark_blue"
+
+            android:padding="5dp"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/hand_tile_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+
+            android:background="@color/dark_blue"
+
+            android:padding="5dp"
+
+
+            />
+
+        <ImageView
+            android:id="@+id/hand_tile_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+
+            android:background="@color/dark_blue"
+
+
+            android:padding="5dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/hand_tile_5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2dp"
+            android:layout_weight="1"
+
+            android:background="@color/dark_blue"
+
+
+            android:padding="5dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/hand_tile_6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/dark_blue"
+
+            android:padding="5dp"
+
+
+            />
+
+
+    </LinearLayout>
+
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/zoom_btns"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+
+    <TextView
+
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="200sp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_btns"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+    <TextView
+
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/points_color"
+        android:textSize="200sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@id/bottom_btns"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        />
+
+    <TextView
+        android:id="@+id/pop_msg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="Player 1 Turn"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bottom_btns"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/game_over_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/game_over_background"
+        android:visibility="gone">
+
+        <ImageView
+
+            android:id="@+id/game_over_logo"
+
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/my_game_over"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+
+        <LinearLayout
+            android:id="@+id/final_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+
+            app:layout_constraintTop_toBottomOf="@id/game_over_logo">
+
+            <TextView
+                android:id="@+id/final_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/qwirkle_yellow"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/final_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/qwirkle_yellow"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/final_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/qwirkle_yellow"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/final_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/qwirkle_yellow"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/final_winner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/qwirkle_yellow"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/done_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/qwirkle_button"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

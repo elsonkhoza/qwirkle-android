@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Qwirkle</string>
+    <string name="trade">Trade</string>
+    <string name="place">Place</string>
+    <string name="menu">Menu</string>
+    <string name="previous">Previous</string>
+    <string name="sound">Sound ON/OFF</string>
+    <string name="quit">Quit</string>
+    <string name="trade_all">Trade All Six</string>
+    <string name="trade_selected">Trade Selected</string>
+
+
+    <string name="welcome_msg">welcome,enter details below to start playing with your friend!</string>
+    <string name="enter_name">Enter player name</string>
+    <string name="enter_ip">Enter ip address</string>
+    <string name="join">Join</string>
+
+    <string name="alert_title_quit">Are you sure you want to quit the game?</string>
+    <string name="alert_msg_quit">This process cannot be undone.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="done">Done</string>
+
+</resources>
